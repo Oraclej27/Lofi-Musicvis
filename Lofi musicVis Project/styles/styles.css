@@ -1,0 +1,392 @@
+/* css for nav bar and footer as well as index.html, i followed a tutorial for navbar and footer css but changed some of the styling
+after I became comfortable I tried the rest on my own*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  /*added fonts */ 
+  @font-face {
+    font-family: lofi;
+    src: url(/Fonts/01DigitRegular.ttf);
+  }
+  @font-face {
+    font-family: digit;
+    src: url(/Fonts/DigitekRegular.ttf);
+  }
+  .top-bar {
+    height: 30px;
+    background-color: #683df5;
+  }
+  
+  .navbar {
+    background: #ffffff;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: lofi;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+  }
+  
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+  #navbar__logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  #navbar__logo img {
+    display: flex;
+    width: 120px;
+    margin: 0 auto;
+    position: fixed;
+  }
+  
+  .navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .navbar__item {
+    height: 80px;
+  }
+  
+  .navbar__links {
+    color: #000dff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+  }
+  
+  .navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    background: #30c6bf;
+    color: #fff;
+    font-family: lofi;
+  }
+  
+  .button:hover {
+    background: #c34efd;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar__links:hover {
+    background-color: #e19cfa;
+    transition: all 0.3s ease;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .navbar__container {
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      z-index: 1;
+      width: 100%;
+      max-width: 1300px;
+      padding: 0;
+    }
+  
+    .navbar__menu {
+      display: grid;
+      grid-template-columns: auto;
+      margin: 0;
+      width: 100%;
+      position: absolute;
+      top: -1000px;
+      opacity: 1;
+      transform: all 0.5s ease;
+      height: 50vh;
+      z-index: -1;
+    }
+    .navbar__menu.active {
+      background: #6498ff;
+      top: 100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 99;
+      height: 70vh;
+      font-size: 1.6rem;
+    }
+  
+    #navbar__logo {
+      padding-left: 20px;
+    }
+  
+    #navbar__logo img {
+      display: flex;
+      width: 90px;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  
+    .navbar__toggle .bar {
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background: #222020;
+    }
+  
+    .navbar__item {
+      width: 100%;
+    }
+  
+    .navbar__links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+    }
+  
+    #mobile-menu {
+      position: absolute;
+      top: 20%;
+      right: 5%;
+      transform: translate(5%, 20%);
+    }
+  
+    .navbar__btn {
+      padding-bottom: 2rem;
+    }
+  
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 80px;
+      margin: 0;
+    }
+  
+    .navbar__toggle .bar {
+      display: block;
+      cursor: pointer;
+    }
+  
+    #mobile-menu.is-active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    #mobile-menu.is-active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    #mobile-menu.is-active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+  /*intro text */
+  .intro__container {
+    padding: 1.5rem;
+    background-color: #8658bd;
+    width: 100;
+    max-width: 100;
+    text-align: center;
+  }
+  .intro__container h2 {
+    font-size: 1.5rem;
+    font-family: digit;
+    color: rgba(99, 234, 230, 0.9);
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+  }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*slider and canvas div. */
+#sliders {
+  display: flex; 
+  background-color: #8658bd;
+  padding-left: 0.5rem;
+}
+  
+  #music__vis {
+    width: 100%;
+    background-color: #fff;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .intro__container h2 {
+      font-size: 1.5rem;
+    }
+    .intro__container p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .intro__container h2 {
+      font-size: 1.2rem;
+    }
+    .intro__container p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .footer__container {
+    background-color: rgba(23, 39, 142, 0.9);
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+  }
+  
+  .footer__links {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+  }
+  .footer__link--wrapper {
+    display: flex;
+  }
+  
+  .footer__link--items {
+    margin: 10px;
+  }
+  
+  .social__media--wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 10px auto 0 auto;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1000px;
+  }
+  
+  .website__right {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-family: lofi;
+    margin-top: 20px;
+  }
+  
+  .footer__link--items h2 {
+    margin-bottom: 16px;
+  }
+  .footer__link--items > h2 {
+    font-family: digit;
+    font-size: 1rem;
+    color: #ffc47c;
+  }
+  
+  .footer__link--items a {
+    font-size: 1.5rem;
+    font-family: lofi;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer__link--items a:hover {
+    color: #fdab4e;
+    transition: 0.3s ease-out;
+  }
+  
+  .footer__logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer__logo img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .footer__links {
+      padding-top: 2rem;
+    }
+  
+    .website__rights {
+      margin-bottom: 2rem;
+    }
+  
+    .footer__link--wrapper {
+      flex-direction: column;
+    }
+  
+    .social__media--wrap {
+      flex-direction: column;
+    }
+    .footer__logo img {
+      max-width: 90px;
+    }
+    .footer__link--items > h2 {
+      font-size: 1.4rem;
+    }
+  
+    .footer__link--items a {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .footer__link--items {
+      margin: 0;
+      padding: 10px;
+      width: 100%;
+    }
+    .footer__logo img {
+      max-width: 70px;
+    }
+    .footer__link--items > h2 {
+      font-size: 1rem;
+    }
+  
+    .footer__link--items a {
+      font-size: 0.8rem;
+    }
+  }
+  

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lofi MusicVis</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/darkmode.css">
+
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/p5.sound.js"></script>
+    <script src="lib/p5.dom.min.js"></script>
+    
+    <script src="JS/sketch.js"></script>
+    <script src="JS/controlsAndInput.js"></script>
+    <script src="JS/playbackButton.js"></script>
+    <script src="JS/visualisations.js"></script>
+
+    <script src="JS/needles.js"></script>
+    <script src="JS/wavepattern.js"></script>
+    <script src="JS/spectrum.js"></script>
+    <script src="JS/wavetriangle.js"></script>
+    <script src="JS/particlepattern.js"></script>
+    <script src="JS/cubes.js"></script>
+</head>
+<body>
+    <div class="top-bar"></div>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <img src="/Images/logo3.png" alt="MusicVis logo">
+            </a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/index.html" class="navbar__links"> Home </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/index.html" class="navbar__links"> Playlists </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/index.html" class="navbar__links"> Discover </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/index.html" class="navbar__links"> Create </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="/index.html" class="navbar__links"> About </a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/" class="button"> Sign up/ Login </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="intro__container">
+        <h2>LOFI MUSICVIS - work , study , code , and  relax beats. </h2>
+    </div>
+    <div id="sliders">
+    </div>
+    <div id="music__vis">
+    </div>
+    <!--footer was created using an online tutorial, I added my own small changes and toggles in the footer-->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="social__media--wrap">
+                    <div class="footer__logo">
+                        <img src="/Images/logo.png" alt="logo">
+                    </div>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Accessibility</h2>
+                    <!--followed online resources to code the dark mode toggle ,-->
+                    <a href="javascript:void(0);" onclick="toggleDarkmode()">INVERT</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Quick Links</h2>
+                    <a href="/index.html">About•</a>
+                    <a href="/index.html">Playlists•</a>
+                    <a href="/index.html">Discover•</a>
+                    <a href="/index.html">Create•</a>
+                    <a href="/index.html">Home</a>
+                </div>
+            </div>
+        </div>
+        <div class="website__right">
+            <p>&copy; LOfi MUSICVIS 2024. All rights reserved</p>
+        </div>
+    </div>
+    <script src="JS/app.js"></script>
+</body>
+</html>

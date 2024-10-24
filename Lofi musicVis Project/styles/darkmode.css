@@ -1,0 +1,74 @@
+
+/* dark mode toggle code, learned from online resourses*/
+.dark-mode {
+    background-color: #201e1e;
+
+/*Dark-mode for indext*/    
+       .top-bar {
+           background-color: #2f285a; 
+       }
+       
+       .navbar
+       {
+           background: rgba(2, 16, 21, 0.9);
+       }
+       
+       .button {
+           background: #d67a4c;
+           color: #fff;
+       }
+       
+       .button:hover {
+           background: #fdab4e;
+       }
+       
+       .navbar__links:hover{
+           background-color: #fdab4e;
+       }
+       .navbar__menu.active{
+           background: #9b5634;
+       }
+       #navbar__logo img {
+           filter: invert(1);
+       }
+   
+       .navbar__links {
+           color: #ffffff;
+       }
+   
+       .navbar__toggle .bar{
+           background: #ffffff;
+       }
+   
+       .intro__container {
+           background-color: #2e0934;
+       }
+       .intro__container h2 {
+           color: rgb(45, 174, 217);
+       }
+       #sliders {
+        display: flex; 
+        background-color:#2e0934;
+        padding-left: 0.5rem;
+      }
+
+      #music__vis {
+        filter: invert(1);
+      }
+   
+       .footer__container{
+           background-color:rgba(2, 16, 21, 0.9) ;
+       }
+
+       .footer__logo img {
+        filter: invert(1);
+    }
+   
+       .footer__link--items > h2 {
+           color: #ffffff;
+       }
+
+       .website__right {
+        color: #fff;
+       }
+    }
